@@ -1,0 +1,14 @@
+
+services:
+  my-react-site:
+    build: .
+    container_name: namecheq
+    restart: always
+    ports:
+      - "8080:80"
+    networks:
+      - npm
+networks:
+  npm:
+    external: true
+    name: npm
